@@ -13,6 +13,8 @@
 		79FD8B6629CCF90E0010438B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FD8B6429CCF90E0010438B /* Main.storyboard */; };
 		79FD8B6829CCF9110010438B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FD8B6729CCF9110010438B /* Assets.xcassets */; };
 		79FD8B6B29CCF9110010438B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FD8B6929CCF9110010438B /* LaunchScreen.storyboard */; };
+		79FD8B7329DF7F8D0010438B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD8B7229DF7F8D0010438B /* HomeViewController.swift */; };
+		79FD8B7529DF7FAA0010438B /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD8B7429DF7FAA0010438B /* TipViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		79FD8B6729CCF9110010438B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FD8B6A29CCF9110010438B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79FD8B6C29CCF9110010438B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79FD8B7229DF7F8D0010438B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		79FD8B7429DF7FAA0010438B /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 		79FD8B5229CCF90E0010438B = {
 			isa = PBXGroup;
 			children = (
+				79FD8B7429DF7FAA0010438B /* TipViewController.swift */,
+				79FD8B7229DF7F8D0010438B /* HomeViewController.swift */,
 				79FD8B5D29CCF90E0010438B /* SunCoin */,
 				79FD8B5C29CCF90E0010438B /* Products */,
 			);
@@ -141,6 +147,8 @@
 				79FD8B6329CCF90E0010438B /* ViewController.swift in Sources */,
 				79FD8B5F29CCF90E0010438B /* AppDelegate.swift in Sources */,
 				79FD8B6129CCF90E0010438B /* SceneDelegate.swift in Sources */,
+				79FD8B7529DF7FAA0010438B /* TipViewController.swift in Sources */,
+				79FD8B7329DF7F8D0010438B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
