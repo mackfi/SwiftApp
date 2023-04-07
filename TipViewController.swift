@@ -15,7 +15,51 @@ class TipViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet weak var PriceEntry: UITextField!
+    
+    @IBOutlet weak var PercentEntry: UITextField!
+    
+    
+    @IBOutlet weak var TipLabel: UILabel!
+    
+    @IBOutlet weak var TotalLabel: UILabel!
+    
+    @IBAction func PriceEntered(_ sender: Any) {
+        PercentEntered()
+    }
+    
+    @IBAction func PriceChanged(_ sender: Any) {
+        PercentEntered()
+    }
+    
+    @IBAction func TipEntered(_ sender: Any) {
+        PercentEntered()
+    }
+    
+    
+    @IBAction func TipChanged(_ sender: Any) {
+        PercentEntered()
+    }
+    
+    func PercentEntered()
+    {
+        var tipAmount = 0.00
+        var priceAmount = 0.00
+        if (PriceEntry.text != nil && PercentEntry.text != nil)
+        {
+            priceAmount = (Double(PriceEntry.text!) ?? 0)
+            
+             tipAmount =  priceAmount * (Double(PercentEntry.text!) ?? 0)
+            
+            tipAmount = Double(round(100 * tipAmount) / 100)
+            
+            priceAmount = Double(round(100 * priceAmount) / 100)
+        }
+        
+        TipLabel.text = "Tip amount: $" + String(tipAmount)
+        TotalLabel.text = "Total after tip: $" + String(tipAmount + priceAmount)
+    }
+    
     /*
     // MARK: - Navigation
 

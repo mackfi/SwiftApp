@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="927.48091603053433" y="0.70422535211267612"/>
         </scene>
-        <!--Tip View Controller-->
+        <!--Tip Calculator-->
         <scene sceneID="Ajj-hG-HFG">
             <objects>
                 <viewController id="P3v-e6-qdh" customClass="TipViewController" customModule="SunCoin" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,6 +63,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="PriceChanged:" destination="P3v-e6-qdh" eventType="editingChanged" id="IhH-8t-Vag"/>
+                                    <action selector="PriceEntered:" destination="P3v-e6-qdh" eventType="editingDidEnd" id="if8-n6-yhc"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Tip Percent" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blw-IG-zrb">
                                 <rect key="frame" x="76" y="368" width="240" height="34"/>
@@ -69,6 +74,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="TipChanged:" destination="P3v-e6-qdh" eventType="editingChanged" id="reY-TJ-wO5"/>
+                                    <action selector="TipEntered:" destination="P3v-e6-qdh" eventType="editingDidEnd" id="K1v-Q6-Lam"/>
                                     <action selector="tipEntered:" destination="4SH-5H-x4m" eventType="editingDidEnd" id="kqZ-Df-iyb"/>
                                 </connections>
                             </textField>
@@ -93,7 +100,13 @@
                         <color key="backgroundColor" red="0.65586560964584351" green="0.10484855622053146" blue="0.1395544707775116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.98039215690000003" green="0.7843137255" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0be-ux-bYR"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="0be-ux-bYR"/>
+                    <connections>
+                        <outlet property="PercentEntry" destination="blw-IG-zrb" id="pSy-rB-iV4"/>
+                        <outlet property="PriceEntry" destination="r66-xf-ByP" id="4SS-YO-sNc"/>
+                        <outlet property="TipLabel" destination="3yP-Gb-dmr" id="sTz-0z-7og"/>
+                        <outlet property="TotalLabel" destination="cwt-m7-pvk" id="gR4-tw-Rqg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5G-LM-A8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="4SH-5H-x4m" userLabel="Exit" sceneMemberID="exit"/>
@@ -108,6 +121,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OrX-sm-9Tt">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -123,5 +143,8 @@
     <resources>
         <image name="Image" width="1024" height="1024"/>
         <image name="inverted no background" width="1024" height="1024"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
