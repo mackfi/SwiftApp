@@ -1,24 +1,21 @@
 //
-//  HomeViewController.swift
+//  InterestViewController.swift
 //  SunCoin
 //
-//  Created by MACK FISCHER on 4/6/23.
+//  Created by MACK FISCHER on 4/7/23.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class InterestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
+        title = "Interest Calculator"
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBOutlet weak var homeImage: UIImageView!
-    
-    @IBOutlet weak var tipButton: UIButton!
+
     /*
     // MARK: - Navigation
 

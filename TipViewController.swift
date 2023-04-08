@@ -11,7 +11,7 @@ class TipViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Tip Screen"
+        title = "Tip Calculator"
         // Do any additional setup after loading the view.
     }
     
