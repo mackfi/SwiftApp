@@ -15,8 +15,10 @@ class FlipViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var tailsOdds = 0.5
-    var headsOdds = 0.5
+    private var tailsOdds = 0.5
+    private var headsOdds = 0.5
+    
+    private var totalOdds = 1.0
     
     @IBOutlet weak var flipSlider: UISlider!
     
@@ -24,10 +26,15 @@ class FlipViewController: UIViewController {
     
     @IBOutlet weak var headsLabel: UILabel!
     
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var totalOddsLabel: UILabel!
+    @IBOutlet weak var flipButton: UIButton!
+    
     @IBAction func sliderChanged(_ sender: Any) {
         UpdateFlipOdds()
-        tailsLabel.text = "Tails: " + String(Double(round(100 * tailsOdds) / 100) * 100) + "%"
-        headsLabel.text = "Heads: " + String(Double(round(100 * headsOdds) / 100) * 100) + "%"
+        tailsLabel.text = "Tails: " + String(format: "%.0f", tailsOdds * 100) + "%"
+        headsLabel.text = "Heads: " + String(format: "%.0f", headsOdds * 100) + "%"
     }
     
     func UpdateFlipOdds() {
@@ -35,6 +42,18 @@ class FlipViewController: UIViewController {
         headsOdds =  Double(flipSlider.value)
     }
     
+    @IBAction func CoinFlipped(_ sender: Any) {
+        var rand = Double.random(in: 0..<1)
+        if (rand < headsOdds){
+            resultLabel.text = "Heads!"
+            totalOdds *= headsOdds
+        }
+        else {
+            resultLabel.text = "Tails!"
+            totalOdds *= tailsOdds
+        }
+        totalOddsLabel.text = String(format: "%.3f", totalOdds * 100) + "%"
+    }
     
     /*
     // MARK: - Navigation

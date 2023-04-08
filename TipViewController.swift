@@ -56,8 +56,8 @@ class TipViewController: UIViewController {
             priceAmount = Double(round(100 * priceAmount) / 100)
         }
         
-        TipLabel.text = "Tip amount: $" + String(tipAmount)
-        TotalLabel.text = "Total after tip: $" + String(tipAmount + priceAmount)
+        TipLabel.text = "Tip amount: $" + String(format: "%.2f", tipAmount)
+        TotalLabel.text = "Total after tip: $" + String(format: "%.2f",tipAmount + priceAmount)
     }
     
     /*
