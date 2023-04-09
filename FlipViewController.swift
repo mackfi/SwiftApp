@@ -12,8 +12,11 @@ class FlipViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Coin Flip"
+        
         // Do any additional setup after loading the view.
     }
+    
+    
     
     private var tailsOdds = 0.5
     private var headsOdds = 0.5
@@ -43,6 +46,8 @@ class FlipViewController: UIViewController {
     }
     
     @IBAction func CoinFlipped(_ sender: Any) {
+        
+        
         var rand = Double.random(in: 0..<1)
         if (rand < headsOdds){
             resultLabel.text = "Heads!"
