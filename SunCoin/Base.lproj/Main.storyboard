@@ -312,15 +312,37 @@
                                 <rect key="frame" x="76" y="103" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkL-k8-UgK">
+                                <rect key="frame" x="143" y="422" width="133" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Click Me!">
+                                    <fontDescription key="titleFontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onClickerClicked:" destination="n7J-p0-tEF" eventType="touchUpInside" id="MkE-ZS-DAO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have clicked 0 times." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XJ-eW-DaJ">
+                                <rect key="frame" x="16" y="610" width="361" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z1L-9R-Xzz"/>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.7843137255" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="n5m-rV-rrf"/>
+                    <connections>
+                        <outlet property="clickerButton" destination="HkL-k8-UgK" id="TJk-37-uFI"/>
+                        <outlet property="totalClicksLabel" destination="3XJ-eW-DaJ" id="HAO-fv-0hs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5o-TZ-udT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1714" y="-789"/>
+            <point key="canvasLocation" x="1713.740458015267" y="-789.43661971830988"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dl7-WO-mFL">
