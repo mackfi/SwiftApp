@@ -23,6 +23,9 @@ class FlipViewController: UIViewController {
     
     private var totalOdds = 1.0
     
+    private var numOfFlips = 0.0
+    private var numOfHeads = 0.0
+    
     @IBOutlet weak var flipSlider: UISlider!
     
     @IBOutlet weak var tailsLabel: UILabel!
@@ -33,6 +36,7 @@ class FlipViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var totalOddsLabel: UILabel!
     @IBOutlet weak var flipButton: UIButton!
+    @IBOutlet weak var headsPercentLabel: UILabel!
     
     @IBAction func sliderChanged(_ sender: Any) {
         UpdateFlipOdds()
@@ -52,12 +56,15 @@ class FlipViewController: UIViewController {
         if (rand < headsOdds){
             resultLabel.text = "Heads!"
             totalOdds *= headsOdds
+            numOfHeads += 1
         }
         else {
             resultLabel.text = "Tails!"
             totalOdds *= tailsOdds
         }
+        numOfFlips += 1
         totalOddsLabel.text = String(format: "%.3f", totalOdds * 100) + "%"
+        headsPercentLabel.text = String(format: "%.3f", numOfHeads/numOfFlips) + "%"
     }
     
     /*

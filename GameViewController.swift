@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,6 +16,7 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     private var totalClicks = 0
+    
     
     @IBOutlet weak var clickerButton: UIButton!
     

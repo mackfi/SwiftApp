@@ -19,7 +19,6 @@
 		79FD8B7929E0BBCE0010438B /* FlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD8B7829E0BBCE0010438B /* FlipViewController.swift */; };
 		79FD8B7B29E0BC6D0010438B /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD8B7A29E0BC6D0010438B /* InterestViewController.swift */; };
 		79FD8B7D29E0BCF70010438B /* VaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD8B7C29E0BCF70010438B /* VaultViewController.swift */; };
-		79FD8B7F29E263A90010438B /* FlipContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FD8B7E29E263A90010438B /* FlipContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		79FD8B7829E0BBCE0010438B /* FlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipViewController.swift; sourceTree = "<group>"; };
 		79FD8B7A29E0BC6D0010438B /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		79FD8B7C29E0BCF70010438B /* VaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultViewController.swift; sourceTree = "<group>"; };
-		79FD8B7E29E263A90010438B /* FlipContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 				79FD8B7C29E0BCF70010438B /* VaultViewController.swift */,
 				79FD8B7A29E0BC6D0010438B /* InterestViewController.swift */,
 				79FD8B7829E0BBCE0010438B /* FlipViewController.swift */,
-				79FD8B7E29E263A90010438B /* FlipContentView.swift */,
 				79FD8B7629E0BAFF0010438B /* GameViewController.swift */,
 				79FD8B7429DF7FAA0010438B /* TipViewController.swift */,
 				79FD8B7229DF7F8D0010438B /* HomeViewController.swift */,
@@ -160,7 +157,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				79FD8B6329CCF90E0010438B /* ViewController.swift in Sources */,
-				79FD8B7F29E263A90010438B /* FlipContentView.swift in Sources */,
 				79FD8B7929E0BBCE0010438B /* FlipViewController.swift in Sources */,
 				79FD8B5F29CCF90E0010438B /* AppDelegate.swift in Sources */,
 				79FD8B7D29E0BCF70010438B /* VaultViewController.swift in Sources */,
